@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy 20th Birthday Ewura Abena! 🎉</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Montserrat:wght@400;600&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-pink-50">
+  <div id="sparkle-container" class="fixed inset-0 pointer-events-none z-50 overflow-hidden"></div>
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="loading-cake">
+      <div class="cake-plate" style="opacity: 0;"></div>
+      <div class="cake-bottom" style="opacity: 0;"></div>
+      <div class="cake-middle" style="opacity: 0;"></div>
+      <div class="cake-top" style="opacity: 0;"></div>
+      <div class="candle" style="opacity: 0;">
+        <div class="flame" style="opacity: 0;"></div>
+      </div>
+    </div>
+    <h3 class="text-2xl mb-2 text-pink-600 fancy-font">Baking something special...</h3>
+    <div class="progress-bar">
+      <div id="progress-fill" class="progress-fill"></div>
+    </div>
+    <div id="progress-text" class="progress-text">0%</div>
+  </div>
+
+  <!-- Floating Elements -->
+  <div id="floating-elements"></div>
+  <!-- Add this right after the floating-elements div -->
+  <div id="sparkle-container" class="sparkles absolute inset-0 pointer-events-none"></div>
+
+  <!-- Hero Section -->
+  <header class="relative overflow-hidden bg-gradient-to-r from-pink-400 to-purple-500 text-white text-center py-32 px-4">
+    <div class="sparkles absolute inset-0"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    
+    <div class="relative z-10 max-w-3xl mx-auto" data-aos="fade-up">
+      <h1 class="text-6xl md:text-8xl mb-6 font-great-vibes">Happy Birthday Dr. Nketiah!</h1>
+      <p class="text-xl mb-8">Me i said I'll do website, It's not any gift to you but then because i'm such a wonderful person, i'll say it's to honour your birthday 💖</p>
+      
+      <div class="text-2xl mb-6 bg-white bg-opacity-80 p-6 rounded-lg shadow-lg text-gray-800">
+        <p class="mb-4">Making her grand entrance into her</p>
+        <div id="age-counter" class="text-7xl font-bold text-pink-600">0</div>
+        <p class="mt-4">year of being absolutely amazing!</p>
+      </div>
+
+      <button id="confetti-btn" class="mt-8 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg transform transition hover:scale-105">
+        <i class="fas fa-birthday-cake mr-2"></i> Celebrate with Confetti!
+      </button>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="py-20 px-4 bg-white" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="fancy-font text-5xl mb-12 text-pink-600 text-center">First of all, Who is Kri Kri? 👑</h2>
+      
+      <div class="bg-gradient-to-r from-pink-100 to-purple-100 p-8 rounded-2xl shadow-xl">
+        <p class="text-center mb-6">
+          <img src="assets/Screenshot_20200129-135221.png" alt="Ewura Abena" class="mx-auto rounded-lg shadow-md max-w-full h-auto md:max-w-md">
+        </p>
+        <p class="text-lg mb-4"><b>Let's take a trip down the memory lane</b></p>
+        
+        <p class="text-lg mb-4">
+          I met Ewura Abena in an animal biology practical class on Wednesday, the 26th of February. Me i was sitting my somewhere and this nigerian-looking girl came to me and was like she wants to copy my work. I was taken aback because ah? So we dey do things? She was even fanfooling me that my sea fan is nice...this liar. One thing led to another and alluvasudden, this girl said she'll take my number so i don't "misplace" her book.
+        </p>
+        
+        <p class="text-lg mb-4">
+          Like ei! So yeah i submitted the books and blah blah blah, then this girl texted me and asked me if i've submitted the books..(Like how distrusting can you be?) Next morning, someone is calling me. I got up, from my <b>SLEEP!</b> only to see that it was Kri calling me. I picked and then she said i should help her out with her chem lab report. She called me like 10 times...and i'm not even joking.
+        </p>
+        
+        <div class="flex justify-center my-6">
+          <img src="assets/proof.jpg" alt="Proof" class="max-w-xs rounded-lg shadow-md">
+        </div>
+        
+        <p class="text-lg">
+          Ps: The "prima delirante" means delusional cousin, not first delirium or whatever thing you said.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Book Card -->
+  <section class="py-20 px-4 bg-gradient-to-r from-pink-50 to-purple-50" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="fancy-font text-5xl mb-12 text-pink-600">Birthday Messages For You</h2>
+      
+      <div class="book-container">
+        <div class="book" id="birthday-book">
+          <div class="book-cover">
+            <h3 class="fancy-font">For Ewura Abena</h3>
+            <div class="w-16 h-16 mb-4">
+              <i class="fas fa-gift text-4xl"></i>
+            </div>
+            <p class="text-lg">Click to open</p>
+          </div>
+          <div class="book-pages">
+            <div class="page active" data-page="1">
+              <div class="page-content">
+                <h4 class="fancy-font">Dear Abena,</h4>
+                <p>On your 19th birthday, I want you to know how special you are to me.</p>
+                <p>Your kindness, laughter, and spirit light up every room you enter.</p>
+                <p>May this year bring you endless joy, wonderful adventures, and all the happiness you deserve!</p>
+                <p class="fancy-font mt-4">With love,</p>
+                <p>Steph 💖</p>
+              </div>
+            </div>
+            <div class="page" data-page="2">
+              <div class="page-content">
+                <h4 class="fancy-font">From Auntie Grace</h4>
+                <p>My dear Abena,</p>
+                <p>Watching you grow into the amazing young woman you are today has been such a joy.</p>
+                <p>May your 19th year be filled with blessings, laughter, and all your heart desires!</p>
+                <p class="fancy-font mt-4">Love always,</p>
+                <p>Auntie Grace</p>
+              </div>
+            </div>
+            <div class="page" data-page="3">
+              <div class="page-content">
+                <h4 class="fancy-font">From Cousin Kwame</h4>
+                <p>Happy Birthday Cuz!</p>
+                <p>19 looks good on you! Can't wait for all the fun memories we'll make this year.</p>
+                <p>Remember - age is just a number, but 19 is a great one!</p>
+                <p class="fancy-font mt-4">Your favorite cousin,</p>
+                <p>Kwame 😎</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-nav">
+          <button class="page-btn prev-btn">Previous</button>
+          <button class="page-btn next-btn">Next</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Favorite Things Section -->
+  <section class="py-20 px-4 bg-white" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="fancy-font text-5xl mb-12 text-pink-600 text-center">Her Favorite Things 🎨</h2>
+      
+      <div class="bg-gradient-to-r from-pink-100 to-purple-100 p-8 rounded-2xl shadow-xl">
+        <p class="text-lg mb-4">Hmm..."Ewura Abena"...does she even have favorites?? Well for starters I know Lavender is her favourite colour and that she watches nothing else apart from Grey's anatomy and Little Demon</p>
+        
+        <ul class="space-y-6">
+          <li class="bg-white p-4 rounded-lg shadow">
+            <span class="font-semibold">Reading?</span> That two by four thing that she calls reading...I'm joking oo. She actually does read, always going on with her Dan Brown, Robert Langdon and what what conspiracy this that. She's still on the first page of the foreword of Crime And Punishment by Fyodor Dostoevsky, book that she bought with her own money.
+          </li>
+          <li class="bg-white p-4 rounded-lg shadow">
+            <span class="font-semibold">Dancing??</span> Oh Good Heavens...Hell NO! She forces oo but then hmmm...well Proverbs 23:7 says that as a man thinketh himself be, so is he. Let's just give her the credit for that I guess.
+          </li>
+          <li class="bg-white p-4 rounded-lg shadow">
+            <span class="font-semibold">Food?</span> Oh yes, a foodie, a glutton...if she gets grilled chicken, salad and Coke, I'll never hear the end of it. I bet you could even kidnap her with it. 3na <b>"life is good, life is good"</b>. Later she'll come and say "God Abeg", which she has surprisingly stopped saying.
+          </li>
+          <li class="bg-white p-4 rounded-lg shadow">
+            <span class="font-semibold">Undermining herself?</span> Yes please. That one dierr give her a Crown made of all the finest things it could possibly be made of because ei!The crown kraa add gold medals and put her name in the guineass book of records on top 😭😭😭It's not good o...But then it has actually become better and she's changing. I think I played a part in that due to the fact that I <b>broached</b> the topic 🤣🤣
+          </li>
+          <li class="bg-white p-4 rounded-lg shadow">
+            <span class="font-semibold">Games?</span> Awoo😭😭 She'll look at you like you're a mad person. Like she has never heard the word before and it's foreign and abstract to her, which it actually is😭. Ask her to name a game character to save her life and she won't be able to (even though the prospect of death is welcoming to her. Gyimiii, you never see anything yet). It's a guaranteed death sentence.
+          </li>
+          <li class="bg-white p-4 rounded-lg shadow">
+            <span class="font-semibold">Snapchat? Instagram?</span> Oh you've got her hooked completely. Ranging from reels to Snapchat stories of King Charles the third(yes I know I'm wrong), Sikaofficial and the rest of her online gist partners, she just won't stop talking about them. Again, you could kidnap her while she's watching and she wouldn't realize. <span class="font-semibold">Ps:</span> you could also hide crucial information by saying it on her Whatsapp groups. Trust me, she would never know. Apparently, that applies to Whatsapp Statuses too, even that of her own sweet and wonderful cousin. This is a topic for another day.
+          </li>
+        </ul>
+        
+        <p class="text-lg mt-6">In a nutshell, Ewura can be an unhinged and abnormal person...not weird, abnormal (very) but then she's fun to be around. 3na you mortal and "I am the universe". Delusional indeed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery of Joy (Agony and Pain) -->
+  <section class="py-20 px-4 bg-gradient-to-r from-pink-50 to-purple-50" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="fancy-font text-5xl mb-12 text-pink-600 text-center">Gallery of Joy (Agony and pain) 📸</h2>
+      
+      <div class="mb-12">
+        <h3 class="text-2xl font-semibold mb-4">Typical Ewura abena moments</h3>
+        <p class="mb-6">Hmm i cannot begin to explain how much this girl fools...like eii w'agyimi o</p>
+        
+        <div class="flex justify-center">
+          <video controls class="max-w-full rounded-lg shadow-lg">
+            <source src="https://res.cloudinary.com/dwb1dtct8/video/upload/v1747621693/WIN_20250414_19_51_16_Pro_lfvtgr.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+          <div class="bg-white p-4 rounded-lg shadow-lg">
+            <img src="assets/cove.jpg" alt="Slides thief" class="w-full h-64 object-cover rounded-lg">
+            <p class="mt-2 text-center">Slides thief</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-lg">
+            <img src="assets/Pokemon.jpg" alt="Pokemon" class="w-full h-64 object-cover rounded-lg">
+            <p class="mt-2 text-center">Pokemon</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-lg">
+            <img src="assets/specimen A.jpg" alt="Specimen" class="w-full h-64 object-cover rounded-lg">
+            <p class="mt-2 text-center">A rare picture of Specimen Ewura Abena hiding from PHYS 143</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-lg">
+            <img src="assets/Snapchat-1768364337.jpg" alt="Dancing" class="w-full h-64 object-cover rounded-lg">
+            <p class="mt-2 text-center">Ewura Abena dancing like her life depends on it</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-lg">
+            <img src="assets/hm.jpg" alt="Photo" class="w-full h-64 object-cover rounded-lg">
+            <p class="mt-2 text-center">Her absurd way of taking pictures</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-lg">
+            <img src="assets/hm2.jpg" alt="Photo" class="w-full h-64 object-cover rounded-lg">
+            <p class="mt-2 text-center">Her absurd way of taking pictures</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-12">
+        <h3 class="text-2xl font-semibold mb-4">Her absurd way of taking pictures</h3>
+        <p class="mb-6">Oh Ewura Abena take a picture lemme see...</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-4 rounded-lg shadow-lg">
+            <img src="assets/hm3.jpg" alt="Photo" class="w-full h-64 object-cover rounded-lg">
+            <p class="mt-2 text-center">Another example</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-lg">
+            <img src="assets/hm4.jpg" alt="Photo" class="w-full h-64 object-cover rounded-lg">
+            <p class="mt-2 text-center">Yet another example</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-lg">
+            <img src="assets/Snapchat-640662273.jpg" alt="Photo" class="w-full h-64 object-cover rounded-lg">
+            <p class="mt-2 text-center">More absurd photos</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-lg">
+            <img src="assets/photo_1_2025-05-16_14-31-35.jpg" alt="Photo" class="w-full h-64 object-cover rounded-lg">
+            <p class="mt-2 text-center">More examples</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-lg">
+            <img src="assets/photo_2_2025-05-16_14-31-35.jpg" alt="Photo" class="w-full h-64 object-cover rounded-lg">
+            <p class="mt-2 text-center">More examples</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-lg">
+            <img src="assets/photo_3_2025-05-16_14-31-35.jpg" alt="Photo" class="w-full h-64 object-cover rounded-lg">
+            <p class="mt-2 text-center">More examples</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white p-4 rounded-lg shadow-lg">
+            <img src="assets/photo_4_2025-05-16_14-31-35.jpg" alt="Photo" class="w-full h-64 object-cover rounded-lg">
+            <p class="mt-2 text-center">More examples</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-lg">
+            <img src="assets/photo_5_2025-05-16_14-31-35.jpg" alt="Photo" class="w-full h-64 object-cover rounded-lg">
+            <p class="mt-2 text-center">More examples</p>
+          </div>
+        </div>
+        
+        <p class="mt-8 text-lg">And yet a new addition from our wonderful birthday girl</p>
+        
+        <div class="flex justify-center mt-4">
+          <img src="assets/hm5.jpg" alt="Photo" id="hm5-image" class="max-w-full rounded-lg shadow-lg">
+        </div>
+        
+        <p class="mt-8 text-lg">And someway somehow, I manage to survive living with this creature 😭😭😭. I need a round of applause.</p>
+        <p class="mt-4 text-lg">Honestly, like all jokes aside, I've really suffered in the hands of this girl and i thank God i have a high mental fortitude and tolerance for "animalistic behaviour", like I would've been a goner...but Meeting you was the best thing that has happened.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Age Journey -->
+  <section class="py-20 px-4 bg-white" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="fancy-font text-5xl mb-12 text-pink-600">Your Amazing Journey ✨</h2>
+      
+      <div class="bg-gradient-to-r from-pink-100 to-purple-100 p-8 rounded-2xl shadow-xl">
+        <h3 class="text-3xl mb-6">You've been brightening the world for:</h3>
+        <div id="life-timer" class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div class="bg-white p-4 rounded-xl shadow-md">
+            <div id="years" class="text-5xl font-bold text-pink-600">--</div>
+            <div class="text-lg text-gray-600">Years</div>
+          </div>
+          <div class="bg-white p-4 rounded-xl shadow-md">
+            <div id="months" class="text-5xl font-bold text-pink-600">--</div>
+            <div class="text-lg text-gray-600">Months</div>
+          </div>
+          <div class="bg-white p-4 rounded-xl shadow-md">
+            <div id="days" class="text-5xl font-bold text-pink-600">--</div>
+            <div class="text-lg text-gray-600">Days</div>
+          </div>
+          <div class="bg-white p-4 rounded-xl shadow-md">
+            <div id="hours" class="text-5xl font-bold text-pink-600">--</div>
+            <div class="text-lg text-gray-600">Hours</div>
+          </div>
+        </div>
+        
+        <div class="mt-10">
+          <h3 class="text-2xl mb-4">That's approximately:</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-pink-50 p-4 rounded-xl shadow-md">
+              <div id="total-days" class="text-4xl font-bold text-pink-600">--</div>
+              <div class="text-lg text-gray-600">Total Days</div>
+            </div>
+            <div class="bg-pink-50 p-4 rounded-xl shadow-md">
+              <div id="total-hours" class="text-4xl font-bold text-pink-600">--</div>
+              <div class="text-lg text-gray-600">Total Hours</div>
+            </div>
+            <div class="bg-pink-50 p-4 rounded-xl shadow-md">
+              <div id="total-minutes" class="text-4xl font-bold text-pink-600">--</div>
+              <div class="text-lg text-gray-600">Total Minutes</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Virtual Cake -->
+  <section class="py-20 px-4 bg-gradient-to-r from-pink-50 to-purple-50" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="fancy-font text-5xl mb-12 text-pink-600">Make a Wish & Cut the Cake! 🎂</h2>
+      
+      <div class="cake-container relative mx-auto mb-10">
+        <div class="cake-plate"></div>
+        <div class="cake-bottom" id="cake-bottom"></div>
+        <div class="cake-middle" id="cake-middle"></div>
+        <div class="cake-top" id="cake-top"></div>
+        
+        <!-- Frosting decorations -->
+        <div class="frosting" style="bottom: 130px; left: 50px;"></div>
+        <div class="frosting" style="bottom: 130px; left: 80px;"></div>
+        <div class="frosting" style="bottom: 130px; left: 110px;"></div>
+        <div class="frosting" style="bottom: 130px; left: 140px;"></div>
+        <div class="frosting" style="bottom: 130px; left: 170px;"></div>
+        
+        <div class="candle" id="candle">
+          <div class="flame" id="flame"></div>
+        </div>
+        
+        <div class="knife" id="cake-knife">
+          <div class="knife-handle"></div>
+        </div>
+        
+        <div class="cake-slice slice-1" id="slice-1"></div>
+        <div class="cake-slice slice-2" id="slice-2"></div>
+      </div>
+      
+      <div class="flex flex-col md:flex-row justify-center gap-4">
+        <button id="blow-candle" class="bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg transform transition hover:scale-105">
+          <i class="fas fa-wind mr-2"></i> Blow Candle
+        </button>
+        <button id="cut-cake" class="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg transform transition hover:scale-105">
+          <i class="fas fa-utensils mr-2"></i> Cut Cake
+        </button>
+        <button id="reset-cake" class="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg transform transition hover:scale-105">
+          <i class="fas fa-redo-alt mr-2"></i> Reset Cake
+        </button>
+      </div>
+      
+      <div id="cake-message" class="mt-8 text-2xl fancy-font text-pink-600">Make a wish and blow the candle! ✨</div>
+    </div>
+  </section>
+
+  <!-- Gift Section -->
+  <section class="py-20 px-4 bg-white" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="fancy-font text-5xl mb-12 text-pink-600">A Special Gift For You 🎁</h2>
+      
+      <div class="flex flex-col items-center">
+        <div class="gift-box mb-8" id="gift-box">
+          <div class="gift-box-top"></div>
+          <div class="gift-box-body">
+            <div class="gift-ribbon"></div>
+            <div class="gift-ribbon-horizontal"></div>
+          </div>
+        </div>
+        
+        <button id="open-gift" class="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform transition hover:scale-105">
+          <i class="fas fa-gift mr-2"></i> Open Your Gift
+        </button>
+        
+        <div id="gift-message" class="mt-8 text-xl max-w-md mx-auto hidden">
+          <p class="mb-4">Your real gift is on its way, but here's a virtual hug from me! 🤗</p>
+          <p class="fancy-font text-2xl text-pink-600">Happy 20th Birthday!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final Countdown -->
+  <section class="py-20 px-4 bg-gradient-to-r from-pink-100 to-purple-100" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="fancy-font text-5xl mb-12 text-pink-600">Until Your Next Birthday ⏳</h2>
+      
+      <div class="bg-white p-8 rounded-2xl shadow-xl inline-block">
+        <div id="birthday-countdown" class="grid grid-cols-4 gap-4">
+          <div>
+            <div id="countdown-days" class="text-5xl font-bold text-pink-600">--</div>
+            <div>Days</div>
+          </div>
+          <div>
+            <div id="countdown-hours" class="text-5xl font-bold text-pink-600">--</div>
+            <div>Hours</div>
+          </div>
+          <div>
+            <div id="countdown-minutes" class="text-5xl font-bold text-pink-600">--</div>
+            <div>Minutes</div>
+          </div>
+          <div>
+            <div id="countdown-seconds" class="text-5xl font-bold text-pink-600">--</div>
+            <div>Seconds</div>
+          </div>
+        </div>
+      </div>
+      
+      <p class="mt-8 text-xl max-w-2xl mx-auto">
+        Every moment with you is special, but I'm already looking forward to celebrating your 21st with you next year!
+      </p>
+    </div>
+  </section>
+
+  <!-- Updated Snapchat Memories Carousel Section -->
+  <section class="py-20 px-4 bg-white" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="fancy-font text-5xl mb-12 text-pink-600 text-center">More Snapchat Memories 📸</h2>
+      
+      <div class="carousel-wrapper relative overflow-hidden">
+        <div class="carousel-container">
+          <div class="carousel-track flex" id="carousel-track">
+            <!-- Images will be added dynamically -->
+          </div>
+        </div>
+      </div>
+      
+      <!-- Image modal container will be added dynamically -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 px-4 bg-pink-600 text-white">
+    <div class="max-w-6xl mx-auto text-center">
+      <h3 class="fancy-font text-4xl mb-6">Happy 20th Birthday!</h3>
+      <p class="text-xl mb-6">Wishing you a year filled with love, laughter, and wonderful adventures.</p>
+      
+      <div class="flex justify-center space-x-6 mb-8">
+        <a href="#" class="text-2xl hover:text-pink-200 transition"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-2xl hover:text-pink-200 transition"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="text-2xl hover:text-pink-200 transition"><i class="fab fa-twitter"></i></a>
+      </div>
+      
+      <p class="text-sm">Made with 💖 by Steph for his amazing cousin &middot; (I'm too good sha) 💕</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
